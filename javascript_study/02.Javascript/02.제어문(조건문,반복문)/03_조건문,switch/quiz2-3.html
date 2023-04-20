@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2-3</title>
+</head>
+<body>
+    
+    <script>
+        const a = Number(prompt('첫번째 정수를 입력하시오.'));
+        const b = Number(prompt('두번째 정수를 입력하시오.'));
+        const c = Number(prompt('세번째 정수를 입력하시오.'));
+
+        var sum = Number(a) + Number(b) + Number (c);
+        var avg = sum / 3;
+
+        var max = a;
+        var min = a;
+
+        if (max < b) {
+            max = b;
+        }
+        if (max < c) {
+            max = c;
+        }
+        if (min > b) {
+            min = b;
+        }
+        if (min > c) {
+            min = c;
+        }
+
+        console.log('최대값: ' + max + ', 최소값: ' + min + ', 합계' + sum + ', 평균' + avg);
+    </script>
+</body>
+</html>

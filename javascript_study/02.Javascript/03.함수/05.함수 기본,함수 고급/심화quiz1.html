@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1.html</title>
+</head>
+<body>
+    
+    <script>
+        const num1 = Number(prompt('첫번째 숫자를 입력하세요.'));
+        const num2 = Number(prompt('두번째 숫자를 입력하세요.'));
+        var result;
+
+        function add(a, b) {
+            return result = a + b;
+        }
+
+        function sub(a, b) {
+            return result = a - b;
+        }
+
+        function division(a, b) {
+            return result = a / b;
+        }
+
+        function multiple(a, b) {
+            return result = a * b;
+        }
+
+        console.log('덧셈: ' + add(num1, num2) + '<br>');
+        console.log('뺄셈: ' + sub(num1, num2) + '<br>');
+        console.log('나눗셈: ' + division(num1, num2) + '<br>');
+        console.log('곱셈: ' + multiple(num1,num2) + '<br>');
+    </script>
+</body>
+</html>

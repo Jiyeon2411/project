@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid1.html</title>
+    <style>
+        #wrapper {
+            display: grid;
+
+            /* 너비가 같은 컬럼 3개를 반복 */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: minmax(100px, auto);
+
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+        /* 홀수번째만 */
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ipsa aliquid delectus pariatur repellendus ut sunt voluptates excepturi ducimus? Odit autem voluptatum voluptatem dolorem magni, modi nobis hic cumque sapiente.</div>
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ipsa aliquid delectus pariatur repellendus ut sunt voluptates excepturi ducimus? Odit autem voluptatum voluptatem dolorem magni, modi.</div>
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ipsa aliquid delectus pariatur repellendus ut sunt voluptates excepturi ducimus? Odit </div>
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ipsa aliquid delectus pariatur repellendus.</div>
+        <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ipsa aliquid.</div>
+    </div>
+</body>
+</html>

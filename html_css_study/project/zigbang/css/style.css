@@ -1,0 +1,465 @@
+@charset "utf-8";
+/* 초기화 태그 */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em !important;
+    height: 2000px;
+     /*강제 스크롤을 주기위해: 삭제하고 사용하세요*/
+     /*강제 스크롤을 주기위해: 삭제하고 사용하세요*/
+}
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+a {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+p {
+    margin: 0 !important;
+}
+.wrap {
+    overflow: hidden;
+    min-width: 1200px;
+}
+/* 헤더 */
+header {
+    height: 80px;
+    position: relative;
+}
+nav {
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    width: 100%;   /*직방은 특이하게 header의 width가 100%로 입니다.*/
+    border-bottom: 1px solid rgb(193, 193, 193);
+    background-color: white;
+}
+.nav__menu >  li {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    padding: 20px;
+}
+.w1 {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+}
+.w2 {
+    display: block;
+    font-size: 13px;
+}
+.sub-menu {
+    display: none;
+    width: 200px;
+    margin-top: 300px;
+    background: white;
+    position: absolute;
+    top: 80px;
+    border: 1px solid rgb(202, 202, 202);
+}
+.nav__menu li:hover .sub-menu {
+    display: block;
+}
+.nav__menu > li > a > span:hover {
+    color: #FF681B;
+}
+.sub-menu > li {
+    padding: 10px;
+}
+.top-button {
+    width: 700px;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    padding-left: 200px;
+}
+.user {
+    position: relative;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+button {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 5px;
+    border:1px solid rgb(211, 211, 211);
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(221, 218, 218);
+}
+.ask {
+    position: relative;
+    width: 105px;
+    display: flex;
+    align-items: center;
+}
+.ask > .button2 {
+    padding-left: 20px;
+}
+/* 말줄임표 만드는 법, width가 반드시 있어야 한다. */
+.test {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+}
+/* 메인 */
+.main__top {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-image: url('../images/bg.jpg');
+}
+.main__top > div:nth-child(1) {
+    width: 100%;
+    height: 340px;
+    padding-top: 156px;
+}
+.main__top > div:nth-child(1) > h1 {
+    width: 100%;
+    height: 46px;
+    text-shadow: rgb(255, 255, 255) 0px 16px 40px;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0px auto;
+    cursor: default;
+}
+.main__top > div:nth-child(2) {
+    width: 100%;
+    height: 196px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+.main__top > div:nth-child(2) > div {
+    display: flex;
+    flex-direction: column;
+    width: 574px;
+    height: 196px;
+    margin: 0 auto;
+}
+.main__top > div:nth-child(2) > div > ul {
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    background-color: rgba(3, 20, 45, 0.85);
+    border-radius: 8px;
+    margin-bottom: 26px;
+    margin: 0 auto;
+    display: flex;
+    border-style: none;
+}
+.main__top > div:nth-child(2) > div > ul > li {
+    width: 114.8px;
+    display: flex;
+    margin: 0 auto;
+    border-style: none;
+    height: 100%;
+    border-radius: 8px;
+}
+.main__top > div:nth-child(2) > div > ul > li > button {
+    font-size: 17px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 8px;
+    z-index: 10;
+    transition: all 0.5s ease 0s;
+    color: white;;
+    font-weight: bold;
+    background-color: rgba(3, 20, 45, 0.85);
+    border-style: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0 auto;
+}
+.search {
+    background-color: rgb(255, 104, 27);
+    border-radius: 8px;
+    margin-top: 30px;
+    width: 574px;
+}
+.search > div:nth-child(1) {
+    width: 508px;
+    height: 60px;
+}
+.search > div:nth-child(1) > input {
+    width: 475px;
+    height: 58px;
+    font-size: 16px;
+    border-width: 0px;
+    background-color: rgb(242, 242, 242);
+    line-height: 1.5;
+    font-family: SpoqaHanSans;
+    border-radius: 8px 0 0 8px;
+    padding-left: 29px;
+}
+.search__button {
+    z-index: 99;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 66px;
+    height: 60px;
+    border: 0px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0px 8px 8px 0px;
+    padding: 13px 18px 15px 20px;
+    display: flex;
+    margin: 0 auto;
+}
+.search > div:nth-child(2) > div {
+    width: 66px;
+    height: 60px;
+    padding-right: 590px;
+}
+.main__1 {
+    width: 100%;
+    height: 271px;
+    padding: 40px 0px 27px;
+    background: white;
+    overflow: hidden;
+}
+.main__1 > div {
+    margin: auto;
+    width: 840px;
+    height: 204px;
+    flex-direction: row;
+    display: flex;
+}
+.main__1 > div > div:nth-child(1) {
+    width: 260px;
+    height: 204px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.main__1 > div > div:nth-child(1) > hr {
+    width: 260px;
+    text-align: left;
+    margin-left: 0;
+}
+.main__1 > div > div:nth-child(2) {
+    height: 204px;
+    margin-left: 30px;
+    width: 260px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.main__1 > div > div:nth-child(2) > div:nth-child(1) {
+    height: 25px;
+    padding-top: 4px;
+    padding-bottom: 11px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(225,225,225,1.00);
+    display: flex;
+}
+.main__1 > div > div:nth-child(2) > div:nth-child(1) > .news__title {
+    width: 230px;
+    padding-bottom: 5px;
+}
+.main__1 > div > div:nth-child(2) > div:nth-child(1) > .news__button {
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+.main__1 > div > div:nth-child(2) > hr {
+    width: 260px;
+    text-align: center;
+    margin-left: 0;
+}
+.main__1 > div > div:nth-child(2) > div:nth-child(2) {
+    height: 160px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateZ(0px);
+}
+.main__1 > div > div:nth-child(2) > div:nth-child(2) > ul {
+    display: flex;
+    height: 160px;
+}
+.main__1 > div > div:nth-child(2) > .news__content > ul > li {
+    height: 32px;
+    vertical-align: middle;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.main__1 > div > div:nth-child(2) > .news__content > ul > li > a {
+    color: rgba(0,0,0,1.00);
+    font-family: SpoqaHanSans;
+    font-size: 12px;
+    line-height: 15px;
+    white-space: nowrap;
+}
+.main__1 > div > div:nth-child(3) {
+    height: 204px;
+    margin-left: 30px;
+    width: 260px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.main__1 > div > div:nth-child(3) > div:nth-child(1) {
+    height: 25px;
+    padding-top: 4px;
+    padding-bottom: 11px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(225,225,225,1.00);
+    display: flex;
+}
+.main__1 > div > div:nth-child(3) > div:nth-child(1) > .notice__title {
+    width: 230px;
+    padding-bottom: 5px;
+}
+.main__1 > div > div:nth-child(3) > div:nth-child(1) > .notice__button {
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+.main__1 > div > div:nth-child(3) > hr {
+    width: 260px;
+    text-align: center;
+    margin-left: 0;
+}
+.main__1 > div > div:nth-child(3) > div:nth-child(2) {
+    height: 160px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateZ(0px);
+}
+.main__1 > div > div:nth-child(3) > div:nth-child(2) > ul {
+    display: flex;
+    height: 160px;
+    text-overflow: ellipsis;
+}
+.main__1 > div > div:nth-child(3) > .notice__content > ul > li {
+    height: 32px;
+    vertical-align: middle;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    text-overflow: ellipsis;
+}
+.main__1 > div > div:nth-child(3) > .notice__content > ul > li > a {
+    color: rgba(0,0,0,1.00);
+    font-family: SpoqaHanSans;
+    font-size: 12px;
+    line-height: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.main__2 {
+    background-color: rgba(243,245,245,1.00);
+    height: 279px;
+}
+.main__2 > div {
+    background: url(../images/phone.png) 109px 0px / contain no-repeat;
+    width: 890px;
+    height: 280px;
+    padding-left: 366px;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+.main__2 > div > div:nth-child(1) {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: 4px;
+    margin-top: 10px;
+    padding-top: 101px;
+}
+.main__2 > div > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 52px;
+    justify-content: space-between;
+}
+.footer__content {
+    flex-shrink: 1;
+    min-height: 298px;
+    width: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    color: rgb(153, 153, 153);
+    padding: 52px 0px 20px;
+    position: relative;
+    text-align: center;
+}
+.footer__content > div {
+    width: 600px;
+    height: 227px;
+    margin: 0px auto;
+    position: relative;
+}
+.footer__content > div > p {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+.footer__content > div > p > a {
+    padding-left: 0px;
+    color: rgb(0, 0, 0);
+    padding: 0px 4px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+.footer__content > div > div {
+    height: 192px;
+    color: rgb(76, 76, 76);
+    font-size: 12px;
+    line-height: 1.6em;
+}
+.footer__content > div > div > p {
+    padding: 24px 0px 13px;
+    text-align: center;
+}
+.footer__content > div > div > p > a {
+    display: inline-block;
+    margin-right: 15px;
+}
+.footer__content > div > div > p > a > img {
+    width: 34px;
+}
+.footer__content > div > div > div {
+    text-align: center;
+    color: rgb(166, 166, 166);
+}
+/* 푸터 */
